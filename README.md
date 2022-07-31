@@ -1,6 +1,6 @@
 ---
 
-title: "OETP-RI-scheme"
+title: "Resource Identifier Scheme for OETP"
 author:
  -
     ins: N. Lukianets
@@ -12,7 +12,7 @@ tags: #OpenEthics #DITAI #disclosure #identity #protocol #OETP #schema
 
 ---
 
-# OETP-RI-scheme
+# Resource Identifier Scheme for OETP
 This repository contains documentation for the Resource Identifier (RI) Scheme: `oetp`.
 
 ## Abstract
