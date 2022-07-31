@@ -17,7 +17,9 @@ Applications/protocols that use this scheme name:
 Interoperability considerations:
 	Unknown, use with care.
 Security considerations:
-	Unknown, use with care.
+	- Domain validation for the use of <domain> in the scheme syntax does not assure that any particular legal entity is connected to the domain, even if the domain name may imply a particular legal entity controls the domain. Use with care.
+	- Introduction of the oetp scheme may help to address potential spoofing risks by providing users with the URI to check whether particular disclosure exists. See security section 4 in [1].
+	- Introduction of the oetp scheme may help to address potential falsification risks by decentralizing disclosure verifications.  See security section 4 in [1]. Additional reflection required realize distributed verification of different disclosure elements.
 Contact:
 	Registering party: Nikita Lukianets <n.lukianets@openethics.ai>
 	Scheme creator: Open Ethics Initiative
