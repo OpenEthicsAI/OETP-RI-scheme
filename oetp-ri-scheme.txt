@@ -1,0 +1,31 @@
+Resource Identifier (RI) Scheme name: oetp
+Status: provisional
+
+Scheme syntax:
+	oetp://<hash> (Where integrity <hash> is the SHA3-512 generated during the disclosure process)
+	oetp://<component>@<alias>[:<disclosure>] (Where <component> is the ID assigned via Disclosure Identity Provider under its <alias> during the first disclosure.)
+	oetp://<domain>[:<disclosure>] (For verified domains (DV), disclosure could be accessed using <productDomain> instead of <componentID>@<generatorAlias>.)
+	example: oetp://156d624b8f2dbea87128a2147f255842652475c5dc595c79f64c90c7ff486d59007c3e18c993e3163395812e26b70ea70dfc413f7ca128869d115f12e5699bf2 (accessing disclosure directly via its known integrity <hash>)
+	example: oetp://limejam.com:954c3f63-73ac-4261-8b77-a40cf0ea0f13 (<disclosure>=”954c3f63-73ac-4261-8b77-a40cf0ea0f13” for the product with <domain>=”limejam.com”)
+	example: oetp://68ff9aad-fa28-45fe-ac9b-61823385ccc0@oe:last (last disclosure for the <component>=”68ff9aad-fa28-45fe-ac9b-61823385ccc0”, generated via Disclosure Identity Provider with <alias>=”oe” )
+Scheme semantics:
+	Load a disclosure for a product or a component.
+Encoding considerations:
+	Unknown, use with care.
+Applications/protocols that use this scheme name:
+	Open Ethics is currently implementing the scheme to be used with Open Ethics Transparency Protocol (OETP) [1] to access disclosures for software products and their components, as well as to access disclosures for public surveillance locations [2] to improve transparency. The working repository for the documentation is publicly available [3].
+Interoperability considerations:
+	Unknown, use with care.
+Security considerations:
+	Unknown, use with care.
+Contact:
+	Registering party: Nikita Lukianets <n.lukianets@openethics.ai>
+	Scheme creator: Open Ethics Initiative
+Author/Change controller:
+	Either the registering party or someone who is verified to represent the scheme creator. See previous answer.
+References:
+   [1]: https://openethics.ai/oetp/
+   [2]: https://openethics.ai/public-surveillance-transparency/
+   [3]: https://github.com/OpenEthicsAI/OETP-RI-scheme
+
+(file created 2022-07-31)
