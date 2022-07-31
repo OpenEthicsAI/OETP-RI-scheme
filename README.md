@@ -15,6 +15,8 @@ tags: #OpenEthics #DITAI #disclosure #identity #protocol #OETP #schema
 # Resource Identifier Scheme for OETP
 This repository contains documentation for the Resource Identifier (RI) Scheme: `oetp`.
 
+[![DOI](https://zenodo.org/badge/519716697.svg)](https://zenodo.org/badge/latestdoi/519716697)
+
 ## Abstract
 "Big Tech" is an important driver of innovation, however, the consequent concentration of power creates Big Risks for the economy, ethical use of technology, and basic human rights (we consider privacy as one of them).
 
