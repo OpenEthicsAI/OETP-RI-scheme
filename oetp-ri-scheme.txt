@@ -2,7 +2,7 @@ Resource Identifier (RI) Scheme name: oetp
 Status: provisional
 
 Scheme syntax:
-	oetp://<hash> (Where integrity <hash> is the SHA3-512 generated during the disclosure process)
+	oetp://<hash> (Where integrity <hash> is the SHA3-512 string generated during the disclosure process)
 	oetp://<component>@<alias>[:<disclosure>] (Where <component> is the ID assigned via Disclosure Identity Provider under its <alias> during the first disclosure.)
 	oetp://<domain>[:<disclosure>] (For verified domains (DV), disclosure could be accessed using <productDomain> instead of <componentID>@<generatorAlias>.)
 	example: oetp://156d624b8f2dbea87128a2147f255842652475c5dc595c79f64c90c7ff486d59007c3e18c993e3163395812e26b70ea70dfc413f7ca128869d115f12e5699bf2 (accessing disclosure directly via its known integrity <hash>)
@@ -11,7 +11,7 @@ Scheme syntax:
 Scheme semantics:
 	Load a disclosure for a product or a component.
 Encoding considerations:
-	Unknown, use with care.
+	The scheme permits the use of non-ASCII characters and accepts IDN (Internationalized domain names) in <domain>. The other elements of the scheme should follow the ASCII encoding. When performing lookup, the domain segment of the schema is converted to ASCII. The ASCII representation starts with the prefix "xn--" and is followed by the domain name segment encoded as Punycode [4,5]. Example: for the "домен.укр" cyryllic domain, the URI "oetp://домен.укр:7df2933d-2de6-445b-b392-17bfb6d989c2" will be looked up as "oetp://xn--d1acufc.xn--j1amh:7df2933d-2de6-445b-b392-17bfb6d989c2" and for emoji domain "oetp://😉.to" will be looked up as "oetp://xn--n28h.to". In case of Right-to-Left scripts it's suggested to follow [6].
 Applications/protocols that use this scheme name:
 	Open Ethics is currently implementing the scheme to be used with Open Ethics Transparency Protocol (OETP) [1] to access disclosures for software products and their components, as well as to access disclosures for public surveillance locations [2] to improve transparency. The working repository for the documentation is publicly available [3].
 Interoperability considerations:
@@ -29,5 +29,8 @@ References:
    [1]: https://openethics.ai/oetp/
    [2]: https://openethics.ai/public-surveillance-transparency/
    [3]: https://github.com/OpenEthicsAI/OETP-RI-scheme
+   [4]: https://www.rfc-editor.org/rfc/rfc3492
+   [5]: https://www.rfc-editor.org/rfc/rfc5890
+   [6]: https://www.rfc-editor.org/rfc/rfc5893
 
 (file created 2022-07-31)
