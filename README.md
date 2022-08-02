@@ -81,7 +81,7 @@ Syntax:
 
     oetp://<domain>[:<disclosure>]
 
-For verified domains (DV), disclosure could be accessed using `<product>` instead of `<component>@<alias>`.)
+For verified domains (DV), disclosure could be accessed using product's `<domain>` instead of `<component>@<alias>`.)
 
 ### Domain Validation
 Product domain validation is issued automatically based on issuing criteria and is linked to the Disclosure Identity Provider.
